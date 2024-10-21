@@ -91,6 +91,7 @@ public:
 
 private:
     static void initialize() {
+        //Changing the initialization to direct input. push_back wouldnt work.
         destinations = {"PHL", "ORL", "EWR"};
         miles = {160, 220, 640};
     }
