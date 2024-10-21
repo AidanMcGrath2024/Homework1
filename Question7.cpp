@@ -25,7 +25,7 @@ public:
         //Makes sure that the destinations and miles vectors are filled out once
         if (!initialized) {
             initialize();
-            initialized = true;
+            initialized = 1;
         }
         origin = from;
         destination = to;
@@ -36,7 +36,7 @@ public:
         distance = miles[endindex];  
         pos = 0;
         vel = 0;
-        at_SCE = false;
+        at_SCE = 0;
         cout << "Plane Created at " << this << endl;
     }
 
@@ -49,11 +49,11 @@ public:
     void operate(double dt) {
         if (pos < distance) {
             pos += (vel / 3600) * dt; // Converting mph to miles per second
-            at_SCE = false;
+            at_SCE = 0;
             return;
         } else {
             if (destination == "SCE") {
-                at_SCE = true;
+                at_SCE = 1;
                 swap(origin, destination);
                 pos = 0.0;
                 return;
@@ -127,7 +127,7 @@ public:
 // Question 2: Modified for Question 3
 vector<string> Plane::destinations(3);
 vector<int> Plane::miles(3);
-bool Plane::initialized = false;
+bool Plane::initialized = 0;
 
 // Question 5
 int main() {
