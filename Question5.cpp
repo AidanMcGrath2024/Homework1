@@ -105,28 +105,6 @@ private:
     }
 };
 
-// Question 6
-class Pilot {
-private:
-    string name;
-
-public:
-    // Constructor
-    Pilot(string name) : name(name) {
-        cout << "Pilot " << this->name << " with certificate number " << this << " is at the gate, ready to board the plane." << endl;
-    }
-
-    ~Pilot() {
-        cout << "Pilot " << name << " is out of the plane." << endl;
-    }
-
-    string getname() const {
-        return name;
-    }
-
-    Plane* myPlane; // Changed to shared_ptr
-};
-
 // Question 2: Modified for Question 3
 vector<string> Plane::destinations(3);
 vector<int> Plane::miles(3);
