@@ -16,7 +16,7 @@ private:
     static vector<string> destinations;
     static vector<int> miles;
 
-    //To keep track of destinations and miles vectors
+    //To keep track of destinations and miles vectors initialization
     static bool initialized;
 
 public:
